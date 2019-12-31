@@ -1,0 +1,293 @@
+/*!
+ * faw_sideNavbar Free 0.0.1 by @faw
+ * 
+ */
+.faw-sideNavbar {
+	position: fixed !important;
+	display: block;
+	height: calc(100% - 40px);
+	box-sizing: border-box;
+	background-color: #1a0003;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 1000;
+}
+
+.faw-sideNavbar.show {
+	width: 250px;
+}
+
+.faw-sideNavbar.hide {
+	width: 0px;
+}
+
+.faw-sideNavbar.mini-sidebar {
+	width: 100px;
+}
+
+.faw-sideNavbar.mini-navbar{
+	margin-top: 48px;
+}
+
+.nav-item>a {
+	font-weight: 600;
+	color: #a7b1c2;
+	padding: 14px 20px 14px 25px;
+	width: 100%;
+}
+	
+.nav-item>a:hover{
+	background-color: #3d0005;
+	color: white;
+}
+.faw-nav_item-animation{
+	box-sizing: border-box;
+	border-left: 1px solid #1a0003;
+	transition: background-color,border-left;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+.nav-item.show{
+	background-color: #3d0005;
+	border-left: 4px solid rgba(255, 0, 0);
+	min-width: 200px;
+}
+
+.nav-item>.nav-link>.fa-1x {
+	margin-right: 6px;
+}
+
+.nav-item>.nav-link>.fa-caret-right {
+	float: right;
+	margin-top: 5px;
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-delay: 0s;
+}
+
+.faw-host-head{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 193.8px;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0px;
+  word-wrap: break-word;
+  background-color: #2f4050;
+  background-clip: border-box;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.7rem;
+}
+
+.faw-nav-header{
+	font-weight: 600;
+	font-size:larger;
+	min-width: 200px;
+	color: #DBDFE4 !important;
+	padding: 0px 0px 0px 0px;
+	display: inline;
+}
+
+.faw-car{
+	display: none;
+	margin-bottom: 6px;
+	margin-top: 13px;
+	margin-left: 5px;
+}
+
+.faw-car:hover{
+	cursor:pointer;
+}
+
+.faw-bottom-logo{
+	display: block;
+	margin: 45px auto;
+}
+
+/* 菜单栏表头部分响应 */
+.faw-sideNavbar.mini-sidebar>ul>.faw-host-head>.faw-car,
+.faw-sideNavbar.mini-sidebar>div>ul>.faw-host-head>.faw-car,
+.faw-sideNavbar.hide>ul>.faw-host-head>.faw-car,
+.faw-sideNavbar.hide>div>ul>.faw-host-head>.faw-car{
+	display: block;
+}
+.faw-sideNavbar.mini-sidebar>ul>.faw-host-head>.faw-nav-header>.companyname,
+.faw-sideNavbar.mini-sidebar>div>ul>.faw-host-head>.faw-nav-header>.companyname,
+.faw-sideNavbar.hide>ul>.faw-host-head>.faw-nav-header>.companyname,
+.faw-sideNavbar.hide>div>ul>.faw-host-head>.faw-nav-header>.companyname{
+	display: none;
+}
+
+.faw-sideNavbar.mini-sidebar>ul>.faw-host-head>.faw-nav-header>.departmentname,
+.faw-sideNavbar.mini-sidebar>div>ul>.faw-host-head>.faw-nav-header>.departmentname,
+.faw-sideNavbar.hide>ul>.faw-host-head>.faw-nav-header>.departmentname,
+.faw-sideNavbar.hide>div>ul>.faw-host-head>.faw-nav-header>.departmentname{
+	display: none;
+}
+
+.faw-sideNavbar.mini-sidebar>ul>.faw-host-head>.user-button-group,
+.faw-sideNavbar.mini-sidebar>div>ul>.faw-host-head>.user-button-group,
+.faw-sideNavbar.hide>ul>.faw-host-head>.user-button-group,
+.faw-sideNavbar.hide>div>ul>.faw-host-head>.user-button-group{
+	display: none;
+}
+
+/* 菜单栏内容部分响应 */
+.faw-sideNavbar.mini-sidebar>ul>li>img,
+.faw-sideNavbar.mini-sidebar>div>ul>li>img,
+.faw-sideNavbar.hide>ul>li>img,
+.faw-sideNavbar.hide>div>ul>li>img{
+	display: none;
+}
+
+.faw-sideNavbar.mini-sidebar>ul>li>.nav-link>span,
+.faw-sideNavbar.mini-sidebar>div>ul>li>.nav-link>span,
+.faw-sideNavbar.hide>ul>li>.nav-link>span,
+.faw-sideNavbar.hide>div>ul>li>.nav-link>span{
+	display: none;
+}
+
+.faw-sideNavbar.hide>ul>li>.nav-link>.fa-caret-right,
+.faw-sideNavbar.hide>div>ul>li>.nav-link>.fa-caret-right,
+.faw-sideNavbar.mini-sidebar>ul>li>.nav-link>.fa-caret-right,
+.faw-sideNavbar.mini-sidebar>div>ul>li>.nav-link>.fa-caret-right{
+	display: none;
+}
+
+/* 菜单栏大小部分响应 */
+.faw-sideNavbar.mini-sidebar>ul>li>.nav-link,
+.faw-sideNavbar.mini-sidebar>div>ul>li>.nav-link{
+	font-size: x-large;
+	text-align: center;
+}
+.faw-sideNavbar.mini-sidebar>ul>li>.nav-link>svg,
+.faw-sideNavbar.mini-sidebar>div>ul>li>.nav-link>svg,
+.faw-sideNavbar.hide>ul>li>.nav-link>svg,
+.faw-sideNavbar.hide>div>ul>li>.nav-link>svg{
+	margin-right: 0px;
+	padding-left: 0px;
+}
+
+.faw-sideNavbar.mini-sidebar>ul>li>.nav-link,
+.faw-sideNavbar.mini-sidebar>div>ul>li>.nav-link{
+	padding-left: 20px;
+}
+
+.faw-sideNavbar.hide>ul>li>.nav-link,
+.faw-sideNavbar.hide>div>ul>li>.nav-link{
+	font-size: xx-large;
+	text-align: center;
+}
+
+.faw-sideNavbar.hide>ul>li,
+.faw-sideNavbar.hide>div>ul>li{
+	opacity: 0;
+}
+
+.faw-nav-notice{
+	font-weight: 600;
+	font-size: larger;
+	color: #DBDFE4 !important;
+	padding: 0px 15px 0px 0px;
+	display: inline;
+}
+
+.faw-nav-header:hover{
+	color: #FFFFFF !important;
+	cursor:pointer;
+}
+
+.faw-nav-notice:hover{
+	color: #FFFFFF !important;
+	cursor:pointer;
+}
+
+.faw-nav-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 1.1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.faw-dropdown{
+  position: relative;
+}
+
+.faw-dropdown:hover{
+  cursor:pointer;
+}
+
+.faw-nav-dropdown-item:hover,.faw-nav-dropdown-item:focus,
+.faw-nav-dropdown-item:active{
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #b01e1f;
+}
+
+.faw-dropdown-search-menu,
+.faw-dropdown-menu{
+	display: block;
+	box-sizing: border-box;
+	max-width: 0px;
+	min-width: 0px;
+	opacity: 0;
+	overflow: hidden;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+
+.faw-dropdown-search-menu{
+	transition-property:min-width,width;
+	width: 0px;
+	background-color: #62010c ;
+}
+
+.faw-dropdown-search-menu.show,
+.faw-dropdown-menu.show{
+	max-width: 300px;
+	min-width: 10rem;
+	opacity: 1;
+}
+
+.faw-dropdown-search-menu.show{
+	width: 200px;
+}
+
+.faw-nav-sidebar{
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	background-color: #3d0005;
+	border-radius: 0px;
+	transition: all;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
+
+.faw-nav-sidebar-item{
+	color: #a7b1c2 !important;
+	font-weight: 520;
+	padding: 0.35rem 0.2rem 0.35rem 50px;
+	
+}
+
+.faw-nav-sidebar-item:hover{
+	color: #F7F7F7 !important;
+	cursor:pointer;
+	text-decoration: none;
+}
+

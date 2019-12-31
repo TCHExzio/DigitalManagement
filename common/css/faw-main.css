@@ -1,0 +1,63 @@
+/*!
+ * faw_main Free 0.0.1 by @faw
+ * 
+ */
+html,body{
+	height: 100%;
+}
+
+
+#faw-wrapper{
+	display: block;
+	box-sizing: border-box;
+	height: 100%;
+	overflow: hidden;	
+}
+
+.faw-mainpage{
+	background: url(../../static/bg_img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 50%;
+	display: block;
+	box-sizing: border-box;
+	height: calc(100% - 74px);
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	margin-left: 0px;
+	background-color: #DBDFE4;
+	z-index: 0;
+}
+
+.faw-content {
+	height: 100%;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	padding: 80px 0;
+	background-color: rgba(37, 37, 37, 0.78);
+	overflow-y: auto;
+}
+
+
+.faw-mainpage.mini-navbar {
+	margin-top: 48px;
+	height: calc(100% - 48px);
+}
+
+.faw-loading{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #21232b;
+}
+
+.faw-loading-icon{
+	margin: 0px auto;
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 40vh;
+}

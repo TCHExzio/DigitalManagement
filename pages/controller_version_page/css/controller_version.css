@@ -1,0 +1,95 @@
+.faw-cv-transfer>div {
+	display: flex;
+	justify-content: center;
+	margin: 0px 10px;
+}
+
+.faw-cv-transfer.column>div {
+	flex-direction: column-reverse;
+}
+
+
+.faw-cv-transfer>div>div:nth-child(2) {
+	margin: auto 5px;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.faw-cv-transfer>div>div:nth-child(2) {
+		margin: auto 5px;
+		height: 75px;
+	}
+
+	.faw-cv-transfer.column>div>div:nth-child(2) {
+		margin: auto;
+		width: 113px;
+		height: 41px;
+	}
+}
+
+
+
+.faw-cv-transfer.column>div>div:nth-child(2) {
+	margin: auto;
+}
+
+.faw-cv-transfer.column>div>div:nth-child(2)>button {
+	display: inline;
+	margin: 5px 5px;
+}
+
+.faw-cv-transfer>div>div:nth-child(1),
+.faw-cv-transfer>div>div:nth-child(3) {
+	max-width: 440px;
+}
+
+.faw-cv-transfer.column>div>div:nth-child(1),
+.faw-cv-transfer.column>div>div:nth-child(3) {
+	width: 90% !important;
+	margin: auto;
+}
+
+
+.header {
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+.header3 {
+	font-weight: normal;
+	text-align: center;
+	margin: 0px;
+	color: #F0EFEE;
+	font-size: 1.5rem;
+}
+
+.faw-controller {
+	padding: 46px 0px;
+}
+
+.faw-cv-division {
+	height: 2px;
+	width: 40px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.faw-cv-division2 {
+	height: 1px;
+	width: 50%;
+	max-width: 600px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.faw-cv-input {
+	max-width: 300px;
+	margin: 0px auto;
+}

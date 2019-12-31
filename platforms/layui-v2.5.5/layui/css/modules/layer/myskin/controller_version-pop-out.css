@@ -1,0 +1,5 @@
+/* controller_version页面拖拽文件过多弹出框的样式 */
+body .controller_version-pop-out .layui-layer-content{
+	background-color: #242d36;
+	color: #FFFFFF;
+}

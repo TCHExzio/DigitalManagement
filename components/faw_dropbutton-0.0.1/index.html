@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<title></title>
+		<!--引入tooltipster-->
+		<link rel="stylesheet" type="text/css" href="../tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="../tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css" />
+		<link href="css/faw_dropbutton.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="dropb-group">
+			<!--悬浮的划出按钮-->
+			<p class="dbchildbox faw_dropbutton_tooltip" title="保存"><i class="fas fa-save fa-1x fa-fw"></i></p>
+			<p class="dbchildbox faw_dropbutton_tooltip" title="修改"><i class="fas fa-pen-square fa-1x fa-fw"></i></p>
+			<p class="dbchildbox faw_dropbutton_tooltip" title="删除"><i class="fas fa-eraser fa-1x fa-fw"></i></p>
+			<p class="dbchildbox faw_dropbutton_tooltip" title="上传"><i class="fas fa-upload fa-1x fa-fw"></i></p>
+			<!--必须有一个class为dbparenti的i标签及dbparentbox的p标签-->
+			<p class="dbparentbox"><i class="fas fa-plus fa-1x dbparenti"></i></p>
+		</div>
+		<!--引入jquery-->
+		<script src="../jquery-3.4.1/jquery.js"></script>
+		<!--引入font-awesome-->
+		<script src="../font-awesome-5.11.2/js/all.js"></script>
+		<!--引入tooltipster-->
+		<script src="../tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+		<script src="js/faw_dropbutton.js"></script>
+		<script src="js/faw_dropbutton_init.js"></script>
+	</body>
+</html>

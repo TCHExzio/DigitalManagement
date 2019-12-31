@@ -1,0 +1,289 @@
+/*!
+ * faw_navbar Free 0.0.1 by @faw
+ * 
+ */
+
+.faw-navbar {
+	position: fixed;
+	width: 100%;
+	background-color: #330206;
+	height: 40px;
+	padding: 0 20px 0px 20px;
+	font-size: 0;
+	transition: height;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+	z-index: 1000;
+}
+
+.faw-navbar.mini-navbar {
+	height: 48px;
+}
+
+
+.faw-nav-topsearchitem,
+.faw-nav-toprightitem,
+.faw-nav-topitem {
+	height: 100%;
+	display: inline;
+	text-align: left;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	vertical-align: middle;
+}
+
+.faw-nav-topsearchitem,
+.faw-nav-toprightitem {
+	float: right;
+}
+
+.faw-nav-topsearchitem {
+	margin-right: 20px;
+	display: none;
+}
+
+.faw-NavSearch,
+.faw-nav-ctrl,
+.faw-NavSwitcher {
+	height: 100%;
+	display: inline-block;
+	text-align: left;
+	cursor: pointer;
+	padding: 12px 20px 12px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+}
+
+.faw-NavSwitcher.mini-navbar {
+	padding: 13px 20px 13px 0;
+}
+
+.faw-NavSearch.mini-navbar {
+	padding: 13px 20px 13px 0;
+}
+
+.faw-NavSearch>.faw-trigger-text:hover {
+	color: #FFFFFF !important;
+	cursor: default;
+}
+
+
+.faw-nav-ctrl {
+	padding: 12px 0px 12px 0;
+}
+
+.faw-nav-topsearch-input {
+	display: inline;
+	box-sizing: border-box;
+	width: 100px;
+	height: 100%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #fff;
+	background-color: #62010c;
+	background-clip: padding-box;
+	border: 0px solid #62010c;
+	position: relative;
+	float: left;
+	transition: width;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
+
+.faw-nav-topsearch-input:focus {
+	width: 200px;
+	border: 0px solid #62010c;
+}
+
+.faw-nav-topsearch-input:focus+.faw-nav-topitem>.faw-NavSearch>.faw-trigger-text>svg {
+	transform: rotate(90deg);
+}
+
+.faw-search {
+	background-color: #62010c;
+}
+
+
+
+.faw-trigger-text {
+	font-size: 15px;
+	font-weight: 600;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 16px;
+	color: #fff;
+}
+
+.faw-trigger-text.mini-navbar {
+	font-size: 22px;
+}
+
+
+.faw-trigger-text:hover {
+	color: #f64444;
+}
+
+.faw-top-divider {
+	display: inline-block;
+	height: 16px;
+	vertical-align: middle;
+	width: 1px;
+	background-color: rgba(255, 255, 255, .5);
+	position: relative;
+	float: left;
+	margin: 12px 20px 12px 0px;
+	font-weight: 400;
+}
+
+.faw-top-divider.mini-navbar {
+	height: 25px;
+	width: 2px;
+	margin: 13px 20px 13px 0px;
+}
+
+
+.faw-Navlogo {
+	height: 100%;
+	display: inline-block;
+	text-align: left;
+	cursor: pointer;
+	padding: 12px 20px 12px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+}
+
+.faw-Navlogo.mini-navbar {
+	padding: 13px 20px 13px 0;
+}
+
+
+.faw-trigger-icon {
+	margin-right: 5px;
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
+
+.faw-nav-dropdown-search-item {
+	display: block;
+	width: 100%;
+	padding: 0.55rem 1.1rem;
+	clear: both;
+	font-weight: 400;
+	font-size: 15px;
+	color: #fff;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
+}
+
+.faw-nav-dropdown-search-item:hover {
+	color: #f64444;
+	text-decoration: none;
+	background-color: #3d0005;
+}
+
+.faw-search-hide-menu {
+	position: fixed !important;
+	top:0px;
+	width: 100%;
+	z-index: 1000;
+	display: block;
+	max-height: 0px;
+	overflow-y: hidden;
+	margin: 0;
+	opacity: 0;
+	background-clip: padding-box;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+
+.faw-search-hide-menu.show {
+	max-height: 1000vh;
+	opacity: 1;
+}
+
+.faw-search-hide-overlay {
+	display: block;
+	width: 100%;
+	height: 48px;
+	background-color: #000000;
+	opacity: 0.4;
+}
+
+.faw-search-hide-overlay.down {
+	height: 100vh;
+}
+
+.faw-dropdown-search-hide-menu {
+	display: block;
+	box-sizing: border-box;
+	opacity: 1;
+	padding-bottom: 2.5rem;
+	overflow: hidden;
+	background-color: #1a0003;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+
+.faw-search-hide-input {
+	display: flex;
+	box-sizing: border-box;
+	background-color: #1a0003;
+	padding: 10px;
+}
+
+.faw-nav-hidesearch-button,
+.faw-nav-hidesearch-input {
+	display: flex;
+	justify-content: flex-end;
+	box-sizing: border-box;
+	flex-grow: 1;
+	min-width: 0px;
+	height: calc(1.5em + 0.75rem + 2px);
+	padding: 0.375rem 0.75rem;
+	margin-left: 0.25rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #000000;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 0px solid #62010c;
+	border-radius: 0.25rem 0rem 0rem 0.25rem;
+}
+
+.faw-nav-dropdown-search-item.hide:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #330206;
+}
+
+.faw-nav-hidesearch-button {
+	flex-grow: 0;
+	width: 75px;
+	min-width: 75px;
+	margin-left: 0rem;
+	margin-right: 0.25rem;
+	border-radius: 0rem 0.25rem 0.25rem 0rem;
+	padding: 0.375rem 0rem;
+}
+
+.faw-nav-hidesearch-button>a :hover {
+	color: #FFFFFF;
+}

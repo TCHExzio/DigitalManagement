@@ -1,0 +1,217 @@
+{
+	"?url": "各个页面post请求网址",
+	"url": {
+		"url": "",
+		"index": "",
+		"controller_version": "",
+		"login": "",
+		"register": ""
+	},
+
+
+	"?index_config": "index页面设置",
+	"index_config": {
+		"page_info": {
+			"name": "FAW-Digital",
+			"href": "#"
+		}
+	},
+	"?faw_nav_item_index": "index页面内容设置",
+	"faw_nav_item_index": [{
+			"isActive": true,
+			"title": "主页",
+			"title_En": "HOME",
+			"title_id": "#HOME",
+			"title_icon": "fa-home",
+			"has_child": true,
+			"child_item": [{
+				"item_class": "Template",
+				"item": "模板页",
+				"item_icon": "fa-share-alt-square fa-spin",
+				"item_text": "渐进式及响应式的模板页,json配置文件快速实现本页面所有内容的修改",
+				"href": "template.html"
+			} ]
+		},
+		{
+			"title": "试验记录",
+			"title_En": "LOG",
+			"title_id": "#LOG",
+			"title_icon": "fa-pen-nib",
+			"has_child": true,
+			"child_item": [{
+					"item_class": "行车",
+					"item": "行车日志",
+					"item_icon": "fa-car",
+					"item_text": "可靠性耐久行车日志、适应性试验行车日志半自动化填写，快速统计",
+					"href": "#"
+				},
+				{
+					"item_class": "行车",
+					"item": "信息反馈",
+					"item_icon": "fa-exclamation-circle",
+					"item_text": "试验问题快速提交，实时记录视频，图片，清晰反应问题",
+					"href": "#"
+				},
+				{
+					"item_class": "行车",
+					"item": "控制器版本记录",
+					"item_icon": "fa-microchip",
+					"item_text": "车辆版本记录数字化管理，有效识别车辆目前软件版本",
+					"href": "controller_version.html"
+				},
+				{
+					"item_class": "费用",
+					"item": "加油充电",
+					"item_icon": "fa-charging-station",
+					"item_text": "拍照上传，减少拷贝复制工作",
+					"href": "#"
+				},
+				{
+					"item_class": "汇总",
+					"item": "汇总表",
+					"item_icon": "fa-code-branch",
+					"item_text": "提供快速统计项目条目，试验过程一目了然",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "平台",
+			"title_En": "PLATFORM",
+			"title_id": "#PLATFORM",
+			"title_icon": "fa-laptop",
+			"has_child": true,
+			"child_item": [{
+					"item_class": "通用",
+					"item": "数据分析",
+					"item_icon": "fa-chart-bar",
+					"item_text": "定制化的试验数据分析及数据分析管理，强化分析体系，知识积累",
+					"href": "#"
+				},
+				{
+					"item_class": "可靠性",
+					"item": "坏路行车评价",
+					"item_icon": "fa-vote-yea",
+					"item_text": "全自动化强化坏路试验行驶速度合格率进行评价，保证试验准确性",
+					"href": "#"
+				},
+				{
+					"item_class": "可靠性",
+					"item": "坏路无人驾驶",
+					"item_icon": "fa-compact-disc fa-spin",
+					"item_text": "强化坏路测试无人化，自动化",
+					"href": "#"
+				},
+				{
+					"item_class": "无人驾驶",
+					"item": "场景库建设",
+					"item_icon": "fa-route",
+					"item_text": "自然驾驶场景采集、分类统计，完成无人驾驶测试用例自动提取",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "收藏",
+			"title_En": "COLLECTION",
+			"title_id": "#COLLECTION",
+			"title_icon": "fa-star",
+			"has_child": false,
+			"child_item": []
+		},
+		{
+			"title": "设置",
+			"title_En": "SETTING",
+			"title_id": "#SETTING",
+			"title_icon": "fa-cog",
+			"has_child": true,
+			"child_item": [{
+					"item_class": "设置",
+					"item": "网页设置",
+					"href": "#"
+				},
+				{
+					"item_class": "设置",
+					"item": "记录设置",
+					"href": "#"
+				},
+				{
+					"item_class": "设置",
+					"item": "平台设置",
+					"href": "#"
+				}
+			]
+		}
+	],
+
+
+	"?controller_version_config": "controller_version页面设置",
+	"controller_version_config": {
+		"page_info": {
+			"name": "FAW-Controller_Version",
+			"href": "index.html"
+		}
+	},
+	"?faw_nav_item_controller_version": "controller_version页面内容设置",
+	"faw_nav_item_controller_version": [{
+			"isActive": true,
+			"title": "版本记录",
+			"title_En": "Log",
+			"title_id": "#Log",
+			"title_icon": "fa-memory",
+			"has_child": false,
+			"child_item": []
+		},
+		{
+			"title": "历史版本查询",
+			"title_En": "HIS",
+			"title_id": "#HIS",
+			"title_icon": "fa-server",
+			"has_child": false,
+			"child_item": []
+		}
+	],
+
+
+	"?template_config": "template页面设置",
+	"template_config": {
+		"page_info": {
+			"name": "FAW-Template",
+			"href": "index.html"
+		}
+	},
+	"?faw_nav_item_template": "template页面内容设置",
+	"faw_nav_item_template": [{
+			"isActive": true,
+			"title": "XXXX",
+			"title_En": "xxxx",
+			"title_id": "#xxxx",
+			"title_icon": "",
+			"has_child": true,
+			"child_item": [{
+					"item_class": "XX",
+					"item": "XX1",
+					"href": "#"
+				},
+				{
+					"item_class": "XX",
+					"item": "XX2",
+					"href": "#"
+				},
+				{
+					"item_class": "XX",
+					"item": "XX3",
+					"href": "#"
+				}
+			]
+		},
+		{
+			"title": "XXX",
+			"title_En": "xxx",
+			"title_id": "#xxx",
+			"title_icon": "",
+			"has_child": false,
+			"child_item": []
+		}
+	]
+}

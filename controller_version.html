@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<title>FAW-Controller_Version</title>
+		<!--引入bootstrap-->
+		<link href="platforms/bootstrap-4.3.1/css/bootstrap.css" rel="stylesheet">
+		<!--引入layui-->
+		<link rel="stylesheet" href="platforms/layui-v2.5.5/layui/css/layui.css" media="all">
+		<!--引入tooltipster-->
+		<link rel="stylesheet" type="text/css" href="components/tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="components/tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css" />
+		<link rel="stylesheet" type="text/css" href="components/tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" />
+		<!--引入tokenfield-->
+		<link rel="stylesheet" type="text/css" href="components/sliptree-bootstrap-tokenfield-0.12.1/dist/css/bootstrap-tokenfield.css" />
+
+		<!--引入faw-->
+		<link href="components/faw_sideNavbar-0.0.1/css/faw_sideNavbar.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="components/faw_nav-0.0.1/css/faw_nav.css" />
+		<link rel="stylesheet" href="components/faw-footer-0.01/css/faw_footer.css" />
+		<link href="components/faw-navbar-0.0.1/css/faw-navbar.css" rel="stylesheet">
+		<link href="common/css/faw-main.css" rel="stylesheet">
+		<link href="pages/controller_version_page/css/controller_version.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="loading">
+			<faw-loading></faw-loading>
+		</div>
+		<div id="faw-wrapper" style="opacity: 0;">
+			<!--顶部导航条-->
+			<div class="faw-navbar">
+				<faw-nav-pagetitle :page_info="page_info"></faw-nav-pagetitle>
+				<faw-nav-toprightitem :navcontent="navcontent"></faw-nav-toprightitem>
+				<faw-nav-topsearchitem :hotitem="hotsearch">
+					<a class="faw-nav-dropdown-search-item" href="#" style="color:#8c8e99 ;">热门搜索</a>
+					<a class="faw-nav-dropdown-search-item" :href="item.item_href" v-for="item in hotsearch">{{item.item_name}}</a>
+				</faw-nav-topsearchitem>
+			</div>
+
+			<!--顶部导航栏-->
+			<div class="faw-nav">
+				<div class="faw-nav-container">
+					<ul id="faw-nav-ul">
+						<li is="faw-nav-li" v-for="(item,index) in items" :key="index" :content="item"></li>
+					</ul>
+					<div>
+						<span style="margin-right: 5px;">研发总院-试验所</span>
+						<img src="static/logo_img/金属logo-白色.png" height="30px" />
+					</div>
+				</div>
+			</div>
+
+			<!--侧部菜单栏-->
+			<nav class="faw-sideNavbar hide">
+				<!--必须有一个class为faw-sideNavbar的nav标签-->
+				<ul class="nav flex-column" id="sidebar-accordion">
+					<faw-sidenavbar-header :content="username"></faw-sidenavbar-header>
+					<li is="faw-sideNavbar-li" v-for="(item,index) in items" :key="index" :content="item">
+						<div :id="item.title_En" class="collapse" data-parent="#sidebar-accordion" v-if="item.has_child">
+							<div class="card faw-nav-sidebar">
+								<a class="faw-nav-sidebar-item" :href="item_child['href']" v-for="(item_child,index_child) in item['child_item']">
+									{{item_child['item']}}
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<!--主页面-->
+			<div class="faw-mainpage ">
+				<div class="faw-content faw-controller">
+					<h3 class="header">试验所数字化管理服务</h3>
+					<h4 class="header3">控制器版本记录</h4>
+					<div class="layui-bg-gray faw-cv-division"></div>
+					<form id="" action="" method="post" style="display: block;">
+						<!--项目编号-->
+						<div class="input-group mb-3 faw-cv-input">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="inputGroupSelect01">项目编号</label>
+							</div>
+							<select class="custom-select" id="inputGroupSelect01">
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+							<div class="input-group-append">
+								<input type="submit" class="layui-btn layui-btn-normal" value="查询" />
+							</div>
+						</div>
+					</form>
+					
+					<div class="faw-cv-division2"></div>
+					<div id="controller_version" class="faw-cv-transfer"></div>
+					<div class="faw-cv-division2"></div>
+					
+					<!--填写提交内容-->
+					<form id="upload" action="" method="post" style="display: block;">
+						<!--提交时间-->
+						<div class="input-group mb-3 faw-cv-input">
+							<div class="input-group-prepend">
+								<span class="input-group-text">提交时间</span>
+							</div>
+							<input id="date" type="text" class="form-control" readonly="readonly" >
+						</div>
+						<!--车辆编号-->
+						<div class="input-group mb-3 faw-cv-input" title="多辆车请按tab自动隔开">
+							<div class="input-group-prepend">
+								<span class="input-group-text">车辆编号</span>
+							</div>
+							<input type="text" class="form-control" id="cv-carnum">
+						</div>
+						<!--软件版本-->
+						<div class="input-group mb-3 faw-cv-input" title="文件拖拽至页面内即可自动填写">
+							<div class="input-group-prepend">
+								<span class="input-group-text">软件版本</span>
+							</div>
+							<input type="text" class="form-control">
+						</div>
+						<!--硬件版本-->
+						<div class="input-group mb-3 faw-cv-input">
+							<div class="input-group-prepend">
+								<span class="input-group-text">硬件版本</span>
+							</div>
+							<input type="text" class="form-control">
+						</div>
+						<div class="input-group mb-3 faw-cv-input">
+							<div style="margin: auto;">
+								<input type="submit" class="layui-btn layui-btn-normal" value="提交" />
+								<input type="reset" class="layui-btn layui-btn-normal" value="重置" />
+							</div>
+						</div>
+					</form>
+					<div class="faw-footer-bottom faw-cv-footer">
+						<faw-footer></faw-footer>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="search_hide_menu">
+			<search_hide_menu :hot_item="hot_search">
+				<a class="faw-nav-dropdown-search-item hide" href="#" style="color:#8c8e99 ;">热门搜索</a>
+				<a class="faw-nav-dropdown-search-item hide" :href="item.item_href" v-for="item in hot_search">{{item.item_name}}</a>
+			</search_hide_menu>
+		</div>
+		
+		<script src="pages/controller_version_page/js/import_js.js"></script>
+		<script src="pages/controller_version_page/js/init.js" ></script>
+		
+	</body>
+</html>

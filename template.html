@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1">
+		<title>FAW-Template</title>
+		<!--引入bootstrap-->
+		<link href="platforms/bootstrap-4.3.1/css/bootstrap.css" rel="stylesheet">
+		<!--引入tooltipster-->
+		<link rel="stylesheet" type="text/css" href="components/tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="components/tooltipster-master/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" />
+		<!--引入jqnav-->
+		<link rel="stylesheet" type="text/css" href="components/faw_nav-0.0.1/css/faw_nav.css" />
+		<!--引入jquerytabhoverxt-->
+		<link href="components/jquerytabhoverxt/css/tabhover.css" rel="stylesheet" type="text/css" />
+		<!--引入faw-->
+		<link href="components/faw_sideNavbar-0.0.1/css/faw_sideNavbar.css" rel="stylesheet">
+		<link rel="stylesheet" href="components/faw-footer-0.01/css/faw_footer.css" />
+		<link href="components/faw-navbar-0.0.1/css/faw-navbar.css" rel="stylesheet">
+		<link href="common/css/faw-main.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="loading">
+			<faw-loading></faw-loading>
+		</div>
+		<div id="faw-wrapper" style="opacity: 0;">
+			<!--顶部导航条-->
+			<div class="faw-navbar">
+				<faw-nav-pagetitle :page_info="page_info"></faw-nav-pagetitle>
+				<faw-nav-toprightitem :navcontent="navcontent"></faw-nav-toprightitem>
+				<faw-nav-topsearchitem :hotitem="hotsearch">
+					<a class="faw-nav-dropdown-search-item" href="#" style="color:#8c8e99 ;">热门搜索</a>
+					<a class="faw-nav-dropdown-search-item" :href="item.item_href" v-for="item in hotsearch">{{item.item_name}}</a>
+				</faw-nav-topsearchitem>
+			</div>
+
+			<!--顶部导航栏-->
+			<div class="faw-nav">
+				<div class="faw-nav-container">
+					<!--id为faw-nav-ul的标签必须存在-->
+					<ul id="faw-nav-ul">
+						<li is="faw-nav-li" v-for="(item,index) in items" :key="index" :content="item"></li>
+					</ul>
+					<div>
+						<span style="margin-right: 5px;">研发总院-试验所</span>
+						<img src="static/logo_img/金属logo-白色.png" height="30px" />
+					</div>
+				</div>
+			</div>
+
+			<!--侧部菜单栏-->
+			<nav class="faw-sideNavbar hide">
+				<!--必须有一个class为faw-sideNavbar的nav标签-->
+				<ul class="nav flex-column" id="sidebar-accordion">
+					<faw-sidenavbar-header :content="username"></faw-sidenavbar-header>
+					<li is="faw-sideNavbar-li" v-for="(item,index) in items" :key="index" :content="item">
+						<div :id="item.title_En" class="collapse" data-parent="#sidebar-accordion" v-if="item.has_child">
+							<div class="card faw-nav-sidebar">
+								<a class="faw-nav-sidebar-item" :href="item_child['href']" v-for="(item_child,index_child) in item['child_item']">
+									{{item_child['item']}}
+								</a>
+							</div>
+						</div>
+					</li>
+					<li style="height: 40px;"></li>
+				</ul>
+			</nav>
+
+			<!--主页面-->
+			<div class="faw-mainpage">
+				<div class="large-content">
+					<h3 class="large-header">
+						<em>放置你的内容</em>
+					</h3>
+					<div class="faw-footer-bottom">
+						<faw-footer></faw-footer>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="search_hide_menu">
+			<search_hide_menu :hot_item="hot_search">
+				<a class="faw-nav-dropdown-search-item hide" href="#" style="color:#8c8e99 ;">热门搜索</a>
+				<a class="faw-nav-dropdown-search-item hide" :href="item.item_href" v-for="item in hot_search">{{item.item_name}}</a>
+			</search_hide_menu>
+		</div>
+		
+		<script src="pages/template_page/js/import_js.js"></script>
+		<script src="pages/template_page/js/init.js"></script>
+		
+	</body>
+</html>

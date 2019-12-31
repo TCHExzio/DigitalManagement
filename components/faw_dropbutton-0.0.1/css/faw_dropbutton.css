@@ -1,0 +1,77 @@
+/*!
+ * faw_dropbutton Free 0.0.1 by @faw
+ * 
+ */
+.dboverlay {
+	position: fixed;
+	display: none;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10001;
+	background-color: #777;
+	opacity: 0;
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	-ms-opacity: 0;
+}
+
+.dropb-group {
+	position: fixed;
+	line-height: 1px;
+}
+
+.dbchildbox {
+	display: inline-block;
+	position: absolute;
+	text-align:center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #007BFF;
+	transition-property: opacity,color;
+	transition-duration: 0.3s,0.3s;
+	max-width: 0px;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 10002;
+	text-shadow: #888888 0px 0px 4px;
+}
+.dbparentbox{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align:center;
+}
+
+.dbchildbox:hover {
+	color: blue;
+	cursor:pointer
+}
+
+.dbparenti {
+	color: #b01e1f;
+	z-index: 10002;
+	transition-property: transform,color;
+	transition-duration: 0.5s,0.3s;
+	text-shadow: #888888 0px 0px 4px;
+}
+
+.dbparenti:hover {
+	color: #ff0000;
+	cursor:pointer
+}
+
+
+.tooltiptext {
+    display: block;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* 定位 */
+    position: fixed;
+    z-index: 1;
+}

@@ -1,0 +1,23 @@
+.faw-loginpage-blur{
+	display: block;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	z-index: -1;
+	position: fixed;
+	opacity: 0.3;
+	filter:blur(3px);
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+	 .faw-loginpage-blur{
+	 	display: block;
+	 	width: 100%;
+	 	height: 100%;
+	 	top:0px;
+	 	z-index: -1;
+	 	position: fixed;
+	 	opacity: 0.15;
+	 }
+}
