@@ -100,7 +100,7 @@
 					</div>
 					<div class="faw-footer-bottom">
 						<faw-footer></faw-footer>
-						<button id="asd" type="button"></button>
+						<!--websocket例子<button id="asd" type="button"></button>-->
 					</div>
 				</div>
 			</div>
@@ -117,7 +117,8 @@
 		<script src="pages/index_page/js/init.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var ws = new WebSocket('ws://10.65.47.49:83')
+				/*websocket例子
+				var ws = new WebSocket('ws://*****:83')
 				ws.onopen = function(res){
 					alert('连接成功');
 					console.log('连接成功');
@@ -137,21 +138,7 @@
 				
 				$("#asd").click(function() {
 					ws.send("wadw98988989");
-					/*var info ={
-					    username:'admin',
-					    password:'123123'
-					};
-					$.ajax({
-					    type: 'post',
-					    url:'http://47.92.124.126:19014/api/user/insertLoginForWeb',
-					    contentType:'application/json',
-					    data: JSON.stringify(info),
-					    dataType:'json',
-					    success:function (data) {
-					
-					    }
-					})*/
-				})
+				})*/
 			})
 		</script>
 	</body>
